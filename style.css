@@ -27,9 +27,9 @@ span2{
     /* display: block; */
     width: 600px;
     height: 600px;
-    /* background-color: pink; */
+    background-color: white;
     position: relative;
-    left: 55%;
+    left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
     display: flex;
@@ -61,6 +61,7 @@ span2{
     padding: 0;
     background-color: white;
     outline: black 1px solid;
+    /* opacity: 0.5; */
 }
 .colors{
     width: 50px;
@@ -121,4 +122,28 @@ span2{
 .colors,
 .button:hover{
     cursor: pointer;
+}
+#tips{
+        display: block;
+        position: absolute;
+        height: 600px;
+        width: 150px;
+        /* background-color: blue; */
+        /* transform: translateX(-50%); */
+        /* transform: rotate(90deg); */
+        border: rgb(103, 92, 92) 5px solid;
+        background-color: rgb(207, 197, 197);
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+}
+.tip{
+    margin: 20%;
+    margin-bottom: 0;
+    height: fit-content;
 }
