@@ -4,159 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Pad</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-body{
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: gray;
-}
-#container{
-    /* display: block; */
-    width: 600px;
-    height: 600px;
-    background-color: pink;
-    position: relative;
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%,-50%);
-    display: flex;
-    /* gap: 20px; */
-    flex-wrap: wrap;
-}
-#colorPallete{
-    display: block;
-    position: absolute;
-    width: 600px;
-    height: 150px;
-    background-color: blue;
-    left: 50%;
-    bottom: 50px;
-    transform: translateX(-50%);
-    border: white 5px solid;
-    border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.divs{
-    width: 150px;
-    height: 150px;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    outline: black 2px solid;
-}
-.colors{
-    width: 75px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-    background-color: purple;
-    outline: white 2px solid;
-}
-</style>
 <body>
-    <header></header>
+    <div id="header"><h1><span1>Pixel</span1><span2> Pad</span2></h1></div>
     <div id="container"></div>
     <div id="colorPallete"></div>
-<script>
-    const container = document.querySelector("#container");
-    const colorPallete = document.querySelector("#colorPallete");
-    const colors = [
-        // Warm Colors
-        "red",      // Bright red
-        "orange",   // Bright orange
-        "yellow",   // Bright yellow
-        "gold",     // Gold
-        "coral",    // Coral
-        "salmon",   // Salmon
-        "pink",     // Pink
-        "brown",    // Brown
-
-        // Cool Colors
-        "green",    // Bright green
-        "lime",     // Lime green
-        "cyan",     // Cyan
-        "blue",     // Bright blue
-        "teal",     // Teal
-        "navy",     // Navy blue
-        "indigo",   // Indigo
-        "violet",   // Violet
-        "purple",   // Purple
-        "magenta",   // Magenta
-
-        // Neutrals
-        "white",    // White
-        "gray",     // Gray
-        "black",    // Black
-        "silver",    // Silver
-        "olive",    // Olive
-        "lavender"  // Lavender
-    ];
-    const colorNames = {
-        "rgb(255, 0, 0)": "Red",
-        "rgb(255, 165, 0)": "Orange",
-        "rgb(255, 255, 0)": "Yellow",
-        "rgb(255, 215, 0)": "Gold",
-        "rgb(255, 127, 80)": "Coral",
-        "rgb(250, 128, 114)": "Salmon",
-        "rgb(255, 192, 203)": "Pink",
-        "rgb(165, 42, 42)": "Brown",
-        
-        "rgb(0, 128, 0)": "Green",
-        "rgb(0, 255, 0)": "Lime",
-        "rgb(0, 255, 255)": "Cyan",
-        "rgb(0, 0, 255)": "Blue",
-        "rgb(0, 128, 128)": "Teal",
-        "rgb(0, 0, 128)": "Navy",
-        "rgb(75, 0, 130)": "Indigo",
-        "rgb(238, 130, 238)": "Violet",
-        "rgb(128, 0, 128)": "Purple",
-        "rgb(255, 0, 255)": "Magenta",
-
-        "rgb(255, 255, 255)": "White",
-        "rgb(128, 128, 128)": "Gray",
-        "rgb(0, 0, 0)": "Black",
-        "rgb(192, 192, 192)": "Silver",
-        "rgb(128, 128, 0)": "Olive",
-        "rgb(230, 230, 250)": "Lavender"
-    };
-    //To iteterate throughs Colors Array
-    let k=0;
-    let currentColor = "white";
-    let setColor = "";
-    for (let i=0;i<16;i++){
-        const div = document.createElement("div");
-        div.classList.add("divs");
-        div.addEventListener("click", () => {
-            div.style.backgroundColor = currentColor; // Change color on hover
-            div.dataset.setColor = currentColor;
-        });   
-        div.addEventListener("mouseover", () => {
-            div.style.backgroundColor = currentColor; // Change color on hover
-        });
-
-        div.addEventListener("mouseout", () => {
-            div.style.backgroundColor = div.dataset.setColor || "white"; // Reset color on mouse out
-        }) 
-        container.appendChild(div);     
-    }
-
-    for (let j=0;j<24;j++){
-        const colorsDiv = document.createElement("div");
-        colorsDiv.classList.add("colors");
-        colorsDiv.style.backgroundColor = (colors[k]);   
-        colorsDiv.addEventListener("click", () => {
-            currentColor = getComputedStyle(colorsDiv).backgroundColor;
-            const colorName = colorNames[currentColor] || "Unknown Color";
-            console.log(colorName);
-        });
-        k++;
-        colorPallete.appendChild(colorsDiv);     
-    }
-
-    
-</script>
+    <div id="buttons">
+        <div id="8x8" class="button eight">8x8</div>
+        <div id="12x12" class="button twelve">12x12</div>
+        <div id="30x30" class="button thirty">30x30</div>
+        <div id="50x50" class="button fifty">50x50</div>
+        <div id="grid" class="button">Toggle Grid</div>
+        <div id="reset" class="button">Reset</div>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "art";
+    src: url("./fonts/art.TTF");
+}
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(235, 141, 141);
+    font-family: art;
+}
+#header{
+    position: absolute;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    font-family: art;
+    font-style: italic;
+}
+span1{
+    color: purple;
+}
+span2{
+    color: green;
+}
+#container{
+    /* display: block; */
+    width: 600px;
+    height: 600px;
+    /* background-color: pink; */
+    position: relative;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    /* gap: 20px; */
+    flex-wrap: wrap;
+    border: 10px solid rgb(220, 122, 138);
+    border-radius: 5px;
+}
+#colorPallete{
+    display: block;
+    position: absolute;
+    height: 600px;
+    width: 150px;
+    /* background-color: blue; */
+    /* transform: translateX(-50%); */
+    /* transform: rotate(90deg); */
+    border: rgb(207, 197, 197) 5px solid;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.divs{
+    /* width: 50px;
+    height: 50px; */
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    outline: black 1px solid;
+}
+.colors{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: purple;
+    outline: white 2px solid;
+}
+#buttons{
+    position: absolute;
+    width: 800px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+.button{
+    display: flex;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: black 2px solid;
+    border-radius: 5px;
+    left: -2px;
+    user-select: none; /* Non-standard */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+
+}
+.eight{
+    background-color: aqua;
+}
+.twelve{
+    background-color: chartreuse;
+}
+.thirty{
+    background-color: rgb(201, 32, 77);
+}
+.fifty{
+    background-color: rgb(90, 59, 203);
+}
+#grid{
+    background-color: teal;
+}
+#reset{
+    background-color: burlywood;
+}
+.divs,
+.colors,
+.button:hover{
+    cursor: pointer;
+}
