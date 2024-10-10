@@ -16,8 +16,8 @@ buttons.forEach(button => {
             case ("30x30"):
                 grid30x30();
                 break;
-            case ("50x50"):
-                grid50x50();
+            case ("60x60"):
+                grid60x60();
                 break;
             case ("reset"):
                 resetf();
@@ -101,15 +101,15 @@ getColor(10); // Logs: Color Name: cyan, RGB Value: rgb(0, 255, 255)
 
 let currentColor = "white";
 let setColor = "";
-let height = "50px";
-let width = "50px";
+let height = "40px";
+let width = "40px";
 let total = 144;
 draw(height,width,total);
 
 // functions
 function grid8x8(){
-    height = "75px";
-    width = "75px";
+    height = "60px";
+    width = "60px";
     total = 64;
     deleteGrid();
     draw(height,width,total);
@@ -117,23 +117,23 @@ function grid8x8(){
 
 };
 function grid12x12(){
-    height = "50px";
-    width = "50px";
+    height = "40px";
+    width = "40px";
     total = 144;
     deleteGrid();
     draw(height,width,total);
 };
 function grid30x30(){
-    height = "30px";
-    width = "30px";
-    total = 400;
+    height = "16px";
+    width = "16px";
+    total = 900;
     deleteGrid();
     draw(height,width,total);
 };
-function grid50x50(){
-    height = "12px";
-    width = "12px";
-    total = 2500;
+function grid60x60(){
+    height = "8px";
+    width = "8px";
+    total = 3600;
     deleteGrid();
     draw(height,width,total);
 };

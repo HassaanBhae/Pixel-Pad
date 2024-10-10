@@ -16,11 +16,11 @@ body{
 #header{
     display: flex;
     position: absolute;
-    font-size: 40px;
+    font-size: 28px;
     text-align: center;
-    width: 600px;
-    top: 20px;
-    height: 110px;
+    width: 500px;
+    top: 15px;
+    height: 60px;
     font-family: art;
     font-style: italic;
     background-color: aquamarine;
@@ -42,7 +42,7 @@ span2{
 #main{
     position: absolute;
     display: flex;
-    width: 1000px;
+    width: 900px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -51,8 +51,8 @@ span2{
 }
 #container{
     /* display: block; */
-    width: 600px;
-    height: 600px;
+    width: 480px;
+    height: 480px;
     background-color: white;
     position: relative;
     left: 50%;
@@ -71,16 +71,11 @@ span2{
     position: absolute;
     height: 600px;
     width: 150px;
-    /* background-color: blue; */
-    /* transform: translateX(-50%); */
-    /* transform: rotate(90deg); */
     border: rgb(207, 197, 197) 5px solid;
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
-    /* left: 0; */
-    /* top: 50%; */
-    /* transform: translateY(-50%); */
+    bottom: 0;
 }
 .divs{
     /* width: 50px;
@@ -147,7 +142,7 @@ span2{
     background-color: burlywood;
 }
 #download{
-    background-color: teal;
+    background-color: gold;
     width: 150px;
 }
 .divs,
@@ -169,8 +164,9 @@ span2{
         display: flex;
         flex-wrap: wrap;
         right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 0;
+        /* top: 50%; */
+        /* transform: translateY(-50%); */
         font-family: 'Courier New', Courier, monospace;
         font-weight: bold;
 }
@@ -178,4 +174,12 @@ span2{
     margin: 20%;
     margin-bottom: 0;
     height: fit-content;
+}
+#footer{
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 100;
 }
