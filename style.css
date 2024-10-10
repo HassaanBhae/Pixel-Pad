@@ -8,20 +8,46 @@ body{
     height: 100vh;
     background-color: rgb(235, 141, 141);
     font-family: art;
+    background-image: url(./bg1.jpg);
+    /* background-image: no-repeat; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
 }
 #header{
+    display: flex;
     position: absolute;
     font-size: 40px;
     text-align: center;
-    width: 100%;
+    width: 600px;
+    top: 20px;
+    height: 110px;
     font-family: art;
     font-style: italic;
+    background-color: aquamarine;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    /* text-align: center; */
+    justify-content: center;
+    border: 5px solid rgb( 84, 62, 149);
+    border-radius: 5px;
+    outline: 5px yellow solid;
 }
 span1{
     color: purple;
 }
 span2{
     color: green;
+}
+#main{
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: blue; */
+    flex-wrap: wrap;
 }
 #container{
     /* display: block; */
@@ -30,8 +56,10 @@ span2{
     background-color: white;
     position: relative;
     left: 50%;
+    transform: translateX(-50%);
+    /* left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); */
     display: flex;
     /* gap: 20px; */
     flex-wrap: wrap;
@@ -50,9 +78,9 @@ span2{
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%);
+    /* left: 0; */
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
 }
 .divs{
     /* width: 50px;
@@ -73,7 +101,7 @@ span2{
 }
 #buttons{
     position: absolute;
-    width: 800px;
+    width: 850px;
     height: 50px;
     left: 50%;
     transform: translateX(-50%);
@@ -118,6 +146,10 @@ span2{
 #reset{
     background-color: burlywood;
 }
+#download{
+    background-color: teal;
+    width: 150px;
+}
 .divs,
 .colors,
 .button:hover{
@@ -136,7 +168,7 @@ span2{
         border-radius: 5px;
         display: flex;
         flex-wrap: wrap;
-        right: 5%;
+        right: 0;
         top: 50%;
         transform: translateY(-50%);
         font-family: 'Courier New', Courier, monospace;

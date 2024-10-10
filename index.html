@@ -6,15 +6,18 @@
     <title>Pixel Pad</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="icon.png" type="image/icon type">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
     <div id="header"><h1><span1>Pixel</span1><span2> Pad</span2></h1></div>
-    <div id="container"></div>
-    <div id="colorPallete"></div>
-    <div id="tips">
-        <div class="tip">ⓘ Click Multiple Times to Increase Darkness!</div>
-        <div class="tip">ⓘ You can also toggle the grid lines with the button below!</div>
-        <div class="tip">ⓘ Press the Download Button to save your Art!</div>
+    <div id="main">    
+        <div id="container"></div>
+        <div id="colorPallete"></div>
+        <div id="tips">
+            <div class="tip">ⓘ Click Multiple Times to Increase the Darkness!</div>
+            <div class="tip">ⓘ You can also toggle the grid lines with the button below!</div>
+            <div class="tip">ⓘ Press the Download Button to save your Art!</div>
+        </div>
     </div>
     <div id="buttons">
         <div id="8x8" class="button eight">8x8</div>
@@ -23,6 +26,7 @@
         <div id="50x50" class="button fifty">50x50</div>
         <div id="grid" class="button">Toggle Grid</div>
         <div id="reset" class="button">Reset</div>
+        <div id="download" class="button">Download</div>
     </div>
 <script src="script.js"></script>
 </body>

@@ -25,6 +25,9 @@ buttons.forEach(button => {
             case ("grid"):
                 toggleGrid();
                 break;
+            case ("download"):
+                download();
+                break;
             default :
                 break;
         }
@@ -85,11 +88,10 @@ function getColor(index) {
         console.log("Index out of range");
         return;
     }
-
     const colorName = colors[index];
     const rgbValue = colorNames[colorName] || "Unknown RGB Value";
     
-    console.log(`Color Name: ${colorName}, RGB Value: ${rgbValue}`);
+    // console.log(`Color Name: ${colorName}, RGB Value: ${rgbValue}`);
     return rgbValue;
 }
 
@@ -160,6 +162,17 @@ function resetf(){
     });
     console.log("resetcalled")
 };
+///Downlaod Div
+function download(){
+    // const div = document.getElementById('snapshot-div');
+    html2canvas(container).then(canvas => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'pixel-pad.png';
+        link.click();
+    });
+
+};
 function draw(height,width,total){
     let opacity = 0.4;
     for (let i=0;i<total;i++){
@@ -171,15 +184,6 @@ function draw(height,width,total){
         div.dataset.opacitycount=0;
         div.addEventListener("click", () => {
             div.style.backgroundColor = currentColor; // Change color on hover
-            // if(div.dataset.setColor === currentColor){
-            //     opacity = opacity+0.2;
-            //     div.style.opacity = opacity;
-            //     console.log(opacity, "Opacity Set","==Opacity Count",div.dataset.opacitycount);
-            // }else{
-            //     opacity = 0.4;
-            //     div.style.opacity = opacity;
-            //     console.log(opacity, "Opacity ReSet");
-            // }
             let count = Number(div.dataset.opacitycount);
             switch(count){
                 case 0:
@@ -227,11 +231,8 @@ for (let j=0;j<36;j++){
     colorsDiv.style.backgroundColor = getColor(j);   
     colorsDiv.addEventListener("click", () => {
         currentColor = getComputedStyle(colorsDiv).backgroundColor;
-        // const colorName = colorNames[currentColor] || "Unknown Color";
-        // console.log(colorName);
     });
-    console.log(j);
-    console.log(colors[j]);
     colorPallete.appendChild(colorsDiv);     
 }
+
 
