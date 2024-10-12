@@ -33,14 +33,42 @@
         height: 40px !important;
     }
     #buttons{
-        bottom: -330px !important;
+        top: 950px !important;
         flex-wrap: wrap !important;
         width: 500px !important;
         justify-content: space-around !important;
         height: 100px !important;
     }
     #footer{
-        bottom: -350px !important;
+        top: 100px !important;
+    }
+}
+/* For PHone */
+@media screen and (max-width: 520px) {
+    #header{
+        transform: scale(0.6) translateX(-85%) !important ;
+    }
+    #main{
+        height: fit-content !important;
+    }
+    #container{
+        width: 240px !important;
+        height: 240px !important;
+    }
+    #colorPallete{
+        top: 250px !important;
+        transform:translateX(-50%) scale(0.7) !important; 
+    }
+    #tips{
+        top: 350px !important;
+        transform:translateX(-50%) scale(0.7) !important; 
+    }
+    #buttons{
+        top: 575px !important;
+        transform:translateX(-50%) scale(0.7) !important; 
+    }
+    #footer{
+        top: 85px !important;
     }
 }
 @font-face {
@@ -227,4 +255,5 @@ span2{
     text-align: center;
     font-size: 12px;
     font-weight: 100;
+    height: fit-content;
 }

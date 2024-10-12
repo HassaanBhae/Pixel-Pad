@@ -104,7 +104,8 @@ let setColor = "";
 let height = "40px";
 let width = "40px";
 let total = 144;
-draw(height,width,total);
+let screenWidth = screen.width;
+console.log('screenWidth: ', screenWidth);
 
 // functions
 function grid8x8(){
@@ -112,15 +113,26 @@ function grid8x8(){
     width = "60px";
     total = 64;
     deleteGrid();
+    if(screenWidth < 520){
+        height = "30px";
+        width = "30px";
+        draw(height,width,total);
+        return;
+    }
     draw(height,width,total);
     console.log("8x8 drawn");
-
 };
 function grid12x12(){
     height = "40px";
     width = "40px";
     total = 144;
     deleteGrid();
+    if(screenWidth < 520){
+        height = "20px";
+        width = "20px";
+        draw(height,width,total);
+        return;
+    }
     draw(height,width,total);
 };
 function grid30x30(){
@@ -128,6 +140,12 @@ function grid30x30(){
     width = "16px";
     total = 900;
     deleteGrid();
+    if(screenWidth < 520){
+        height = "8px";
+        width = "8px";
+        draw(height,width,total);    
+        return;
+    }
     draw(height,width,total);
 };
 function grid60x60(){
@@ -135,6 +153,12 @@ function grid60x60(){
     width = "8px";
     total = 3600;
     deleteGrid();
+    if(screenWidth < 520){
+        height = "4px";
+        width = "4px";
+        draw(height,width,total);    
+        return;
+    }
     draw(height,width,total);
 };
 let toggle = 0;
@@ -234,5 +258,6 @@ for (let j=0;j<36;j++){
     });
     colorPallete.appendChild(colorsDiv);     
 }
-
+grid12x12();
+// alert("Screen Width"+screen.width);
 
