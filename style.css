@@ -1,3 +1,48 @@
+@media screen and (max-width: 900px) {
+    body{
+        background-size: contain !important;
+        /* background-repeat: no-repeat ; */
+        width: 100% !important;
+    }
+    #main{
+        height: 1000px;
+        width: 100% !important;
+    }
+    #colorPallete{
+        top: 520px;
+        width: 480px !important;
+        height: 120px !important;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #tips{
+        top: 680px;
+        width: 480px !important;
+        height: 120px !important;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-wrap: nowrap !important;
+    }
+    .tip{
+        margin: 0 !important;
+        margin-left: 20px !important;
+        margin-top: 10px !important;
+    }
+    .colors{
+        width: 40px !important;
+        height: 40px !important;
+    }
+    #buttons{
+        bottom: -330px !important;
+        flex-wrap: wrap !important;
+        width: 500px !important;
+        justify-content: space-around !important;
+        height: 100px !important;
+    }
+    #footer{
+        bottom: -350px !important;
+    }
+}
 @font-face {
     font-family: "art";
     src: url("./fonts/art.TTF");
@@ -44,8 +89,8 @@ span2{
     display: flex;
     width: 900px;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    top: 120px;
+    transform: translateX(-50%);
     /* background-color: blue; */
     flex-wrap: wrap;
 }
